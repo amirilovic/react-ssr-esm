@@ -1,11 +1,9 @@
 import cors from "cors";
 import express from "express";
-import helmet from "helmet";
 import { renderToString } from "./render-to-string.js";
 
 const app = express();
 
-app.use(helmet({ contentSecurityPolicy: false }));
 app.use(express.json());
 app.use(cors());
 
